@@ -4,38 +4,37 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Fondo claro premium y tipografía carbón */
-  --background: #fbfbfa; /* Off-white / stone-50 de baja intensidad */
-  --foreground: #1c1917; /* stone-900 */
+  /* Fondo grafito mate y textos limpios */
+  --background: #0f172a; /* slate-900 */
+  --foreground: #f8fafc; /* slate-50 */
   
-  /* Tarjetas blancas puras con bordes muy finos */
-  --card: #ffffff;
-  --card-foreground: #1c1917;
+  /* Tarjetas con un contraste suave */
+  --card: #1e293b; /* slate-800 */
+  --card-foreground: #f8fafc;
   
-  --popover: #ffffff;
-  --popover-foreground: #1c1917;
+  --popover: #1e293b;
+  --popover-foreground: #f8fafc;
   
-  /* Color Principal: Verde Esmeralda Monetario */
-  --primary: #10b981; /* emerald-500 */
+  /* Color Principal: Azul Eléctrico */
+  --primary: #3b82f6; /* blue-500 */
   --primary-foreground: #ffffff;
   
-  /* Color de Acento: Menta suave */
-  --secondary: #f0fdf4; /* emerald-5 */
-  --secondary-foreground: #15803d; /* emerald-700 */
+  /* Color de Acento: Cyan brillante para destacar objetivos/porcentajes */
+  --secondary: #0f172a; 
+  --secondary-foreground: #38bdf8; /* sky-400 */
   
-  --muted: #f5f5f4; /* stone-100 */
-  --muted-foreground: #78716c; /* stone-500 */
+  --muted: #334155; /* slate-700 */
+  --muted-foreground: #94a3b8; /* slate-400 */
   
-  --accent: #34d399; /* emerald-400 */
-  --accent-foreground: #1c1917;
+  --accent: #06b6d4; /* cyan-500 */
+  --accent-foreground: #0f172a;
   
-  --destructive: #dc2626;
-  --destructive-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #f8fafc;
   
-  /* Bordes ultra sutiles para que el diseño se vea muy limpio */
-  --border: #e7e5e4; /* stone-200 */
-  --input: #fffffff;
-  --ring: rgba(16, 185, 129, 0.2); /* Brillo verde sutil */
+  --border: #334155; /* slate-700 */
+  --input: #1e293b;
+  --ring: rgba(59, 130, 246, 0.3); /* Brillo azul sutil */
   
   --radius: 1rem;
 }
