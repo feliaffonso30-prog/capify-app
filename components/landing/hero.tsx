@@ -18,7 +18,7 @@ export function Hero() {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 mb-8">
             <div className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
             <span className="text-sm font-medium text-accent">
-              Inversiones personalizadas con IA
+              Tus inversiones
             </span>
           </div>
 
