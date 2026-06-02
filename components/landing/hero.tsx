@@ -43,7 +43,7 @@ export function Hero() {
               size="lg" 
               className="w-full sm:w-auto bg-gradient-to-r from-accent to-accent/90 hover:from-accent/90 hover:to-accent/80 text-accent-foreground shadow-lg shadow-accent/25 group px-8 h-12"
             >
-              Comenzar gratis
+              comenza ahora
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
             </Button>
             <Button
@@ -74,7 +74,7 @@ export function Hero() {
               <svg className="w-4 h-4 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
               </svg>
-              <span>Educación incluida</span>
+              <span>Aprender invirtiendo</span>
             </div>
           </div>
         </div>
