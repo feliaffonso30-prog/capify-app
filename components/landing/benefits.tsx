@@ -4,7 +4,7 @@ const benefits = [
   "Portafolios adaptados a tu perfil único",
   "Explicaciones claras de cada recomendación",
   "Riesgos comunicados de forma transparente",
-  "Educación financiera integrada",
+  "Aprendisaje sobre finanzas",
   "Sin jerga técnica innecesaria",
   "Actualización constante de tu estrategia",
 ]
