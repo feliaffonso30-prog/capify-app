@@ -24,10 +24,10 @@ export function Hero() {
 
           {/* Headline */}
           <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl leading-[1.08] text-balance">
-            Entendé tus inversiones.
+            Inverti con confianza
             <br />
             <span className="bg-gradient-to-r from-accent via-accent to-accent-secondary bg-clip-text text-transparent">
-              Construí tu futuro.
+              tu primera estrategia de inversion
             </span>
           </h1>
 
