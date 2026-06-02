@@ -4,39 +4,41 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Fondo grafito mate y textos limpios */
-  --background: #0f172a; /* slate-900 */
-  --foreground: #f8fafc; /* slate-50 */
+  /* Fondo grafito ultra oscuro premium (casi negro, muy elegante) */
+  --background: #0b0f19; 
+  --foreground: #f8fafc; /* Blanco titanio / slate-50 */
   
-  /* Tarjetas con un contraste suave */
-  --card: #1e293b; /* slate-800 */
+  /* Tarjetas con un tono gris azulado oscuro para que resalten del fondo */
+  --card: #131a2c; 
   --card-foreground: #f8fafc;
   
-  --popover: #1e293b;
+  --popover: #131a2c;
   --popover-foreground: #f8fafc;
   
-  /* Color Principal: Azul Eléctrico */
+  /* Color Principal: Azul Eléctrico Vibrante (para botones activos y perfiles) */
   --primary: #3b82f6; /* blue-500 */
   --primary-foreground: #ffffff;
   
-  /* Color de Acento: Cyan brillante para destacar objetivos/porcentajes */
-  --secondary: #0f172a; 
-  --secondary-foreground: #38bdf8; /* sky-400 */
+  /* Color Secundario: Azul noche profundo para elementos inactivos o fondos sutiles */
+  --secondary: #1e293b; /* slate-800 */
+  --secondary-foreground: #60a5fa; /* blue-400 */
   
-  --muted: #334155; /* slate-700 */
-  --muted-foreground: #94a3b8; /* slate-400 */
+  --muted: #1e293b;
+  --muted-foreground: #64748b; /* slate-500 para textos secundarios menos importantes */
   
+  /* Color de Acento: Cyan brillante (perfecto para destacar los porcentajes de la estrategia o bordes activos) */
   --accent: #06b6d4; /* cyan-500 */
-  --accent-foreground: #0f172a;
+  --accent-foreground: #0b0f19;
   
   --destructive: #ef4444;
-  --destructive-foreground: #f8fafc;
+  --destructive-foreground: #ffffff;
   
-  --border: #334155; /* slate-700 */
-  --input: #1e293b;
-  --ring: rgba(59, 130, 246, 0.3); /* Brillo azul sutil */
+  /* Bordes y líneas divisorias sutiles */
+  --border: #1e293b; 
+  --input: #0b0f19;
+  --ring: rgba(59, 130, 246, 0.4); /* Brillo azul eléctrico para cuando hacés foco */
   
-  --radius: 1rem;
+  --radius: 1rem; /* Bordes redondeados de 16px, muy suaves */
 }
 
 .dark {
