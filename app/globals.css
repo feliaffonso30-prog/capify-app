@@ -4,40 +4,45 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: oklch(0.99 0.002 85);
-  --foreground: oklch(0.22 0.02 250);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.22 0.02 250);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.22 0.02 250);
-  --primary: oklch(0.22 0.02 250);
-  --primary-foreground: oklch(0.99 0.002 85);
-  --secondary: oklch(0.97 0.008 85);
-  --secondary-foreground: oklch(0.22 0.02 250);
-  --muted: oklch(0.96 0.008 85);
-  --muted-foreground: oklch(0.48 0.015 250);
-  --accent: oklch(0.62 0.16 50);
-  --accent-foreground: oklch(0.99 0.002 85);
-  --accent-secondary: oklch(0.45 0.08 230);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.93 0.008 85);
-  --input: oklch(0.97 0.008 85);
-  --ring: oklch(0.62 0.16 50);
-  --chart-1: oklch(0.62 0.16 50);
-  --chart-2: oklch(0.45 0.08 230);
-  --chart-3: oklch(0.70 0.14 45);
-  --chart-4: oklch(0.55 0.06 200);
-  --chart-5: oklch(0.75 0.12 55);
-  --radius: 0.75rem;
-  --sidebar: oklch(0.99 0.002 85);
-  --sidebar-foreground: oklch(0.22 0.02 250);
-  --sidebar-primary: oklch(0.22 0.02 250);
-  --sidebar-primary-foreground: oklch(0.99 0.002 85);
-  --sidebar-accent: oklch(0.97 0.008 85);
-  --sidebar-accent-foreground: oklch(0.22 0.02 250);
-  --sidebar-border: oklch(0.93 0.008 85);
-  --sidebar-ring: oklch(0.62 0.16 50);
+  /* Fondo principal */
+  --background: #0c0a09;
+  --foreground: #f5f5f4;
+
+  /* Cards más modernas */
+  --card: #18181b;
+  --card-foreground: #f5f5f4;
+
+  --popover: #18181b;
+  --popover-foreground: #f5f5f4;
+
+  /* Naranja principal */
+  --primary: #f97316;
+  --primary-foreground: #0c0a09;
+
+  /* Secundario */
+  --secondary: #78350f;
+  --secondary-foreground: #fde68a;
+
+  /* Elementos apagados */
+  --muted: #27272a;
+  --muted-foreground: #a1a1aa;
+
+  /* Ámbar más brillante */
+  --accent: #fbbf24;
+  --accent-foreground: #0c0a09;
+
+  --destructive: #ef4444;
+  --destructive-foreground: #f5f5f4;
+
+  /* Bordes */
+  --border: #27272a;
+  --input: #18181b;
+
+  /* Glow más visible */
+  --ring: rgba(249, 115, 22, 0.45);
+
+  /* Bordes suaves */
+  --radius: 1rem;
 }
 
 .dark {
