@@ -46,14 +46,16 @@ export function Hero() {
               comenza ahora
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
             </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="w-full sm:w-auto px-8 h-12 border-border/60 hover:bg-muted/50 group"
-            >
-              <Play className="mr-2 h-4 w-4 text-accent" />
-              Ver demo
-            </Button>
+            <Link href="/demo">
+  <Button
+    variant="outline"
+    size="lg"
+    className="w-full sm:w-auto px-8 h-12 border-border/60 hover:bg-muted/50 group"
+  >
+    <Play className="mr-2 h-4 w-4 text-accent" />
+    Ver demo
+  </Button>
+</Link>
           </div>
 
           {/* Trust indicators */}
