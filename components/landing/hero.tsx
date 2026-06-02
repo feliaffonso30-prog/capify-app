@@ -33,8 +33,8 @@ export function Hero() {
 
           {/* Subheadline */}
           <p className="mt-8 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto text-pretty">
-            Una plataforma que te ayuda a tomar decisiones financieras claras, 
-            con educación integrada y portafolios adaptados a tu perfil.
+            Capify te ayuda a tomar decisiones financieras claras
+            con un portafolios adaptados a tu perfil.
           </p>
 
           {/* CTA Buttons */}
