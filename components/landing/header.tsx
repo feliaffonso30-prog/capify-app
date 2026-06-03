@@ -63,7 +63,7 @@ export function Header() {
             </a>
             
             {/* Comenzar -> Cambiado a "Demo" con color azul premium */}
-            <a href="#demo-section">
+            <a href="demo">
               <Button size="sm" className="text-sm bg-secondary text-blue-400 border border-border hover:bg-secondary/80 font-semibold transition-all">
                 Demo
               </Button>
@@ -113,7 +113,7 @@ export function Header() {
               
               {/* Botones Mobile arreglados */}
               <div className="flex flex-col gap-3 pt-5 border-t border-border/40">
-                <a href="#waitlist-section" onClick={() => setMobileMenuOpen(false)}>
+                <a href="#waitlist" onClick={() => setMobileMenuOpen(false)}>
                   <Button variant="ghost" size="sm" className="w-full justify-start text-muted-foreground">
                     Ingresar
                   </Button>
