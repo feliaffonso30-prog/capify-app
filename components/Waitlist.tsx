@@ -35,7 +35,7 @@ export function Waitlist() {
 
   return (
     <section className="w-full max-w-xl mx-auto px-4 py-16 relative">
-      {/* Glow de fondo azul helado de baja opacidad alineado al diseño */}
+      {/* Glow de fondo azul helado de baja opacidad */}
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.05),transparent_60%)] blur-2xl pointer-events-none" />
 
       {!enviado ? (
@@ -62,7 +62,7 @@ export function Waitlist() {
                 <Input
                   id="nombre"
                   type="text"
-                  placeholder="Ej. name"
+                  placeholder="Ej. Cata"
                   value={nombre}
                   onChange={(e) => setNombre(e.target.value)}
                   disabled={loading}
@@ -87,15 +87,15 @@ export function Waitlist() {
                 />
               </div>
 
-              {/* Botón con el Gradiente Azul y Cyan de la Landing Principal */}
+              {/* Botón corregido con los estilos estables de tu globals.css */}
               <Button
                 type="submit"
                 disabled={loading}
-                className="w-full mt-2 bg-gradient-to-r from-blue-500 to-cyan-500 hover:opacity-95 text-white font-semibold tracking-wide py-5 shadow-xl shadow-blue-500/10 transition-all active:scale-[0.98] disabled:opacity-50"
+                className="w-full mt-2 bg-secondary hover:bg-secondary/80 text-blue-400 border border-border font-bold tracking-wide py-5 transition-all active:scale-[0.98] disabled:opacity-50 cursor-pointer"
               >
                 {loading ? (
-                  <div className="flex items-center gap-2">
-                    <span className="h-4 w-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                  <div className="flex items-center justify-center gap-2">
+                    <span className="h-4 w-4 border-2 border-blue-400 border-t-transparent rounded-full animate-spin" />
                     Reservando tu lugar...
                   </div>
                 ) : (
@@ -109,7 +109,7 @@ export function Waitlist() {
         /* TARJETA DE ÉXITO */
         <Card className="bg-card border-border/80 backdrop-blur-md shadow-2xl text-center p-8 animate-in fade-in zoom-in-95 duration-500">
           <CardContent className="pt-6 space-y-4">
-            <div className="mx-auto h-12 w-12 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center text-xl shadow-lg shadow-blue-500/20">
+            <div className="mx-auto h-12 w-12 rounded-full bg-secondary border border-border text-blue-400 flex items-center justify-center text-xl shadow-lg">
               ✨
             </div>
             <div className="space-y-2">
