@@ -56,7 +56,7 @@ export function Header() {
           {/* Desktop CTA Buttons - Rediseñados y Vinculados */}
           <div className="hidden md:flex md:items-center md:gap-3">
             {/* Ingresar -> Ahora baja hasta la Waitlist */}
-            <a href="#waitlist-section">
+            <a href="#waitlist">
               <Button variant="ghost" size="sm" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Ingresar
               </Button>
