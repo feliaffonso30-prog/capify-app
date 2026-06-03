@@ -113,7 +113,7 @@ export default function DemoPage() {
 
                   {/* Selector Perfil */}
                   <div className="space-y-2">
-                    <Label className="text-foreground/90 font-medium">Perfil de Riesgo</Label>
+                    <Label className="text-foreground/90 font-medium">Perfil de riesgo</Label>
                     <div className="grid grid-cols-3 gap-2">
                       {(["Conservador", "Moderado", "Agresivo"] as Perfil[]).map((p) => (
                         <button
