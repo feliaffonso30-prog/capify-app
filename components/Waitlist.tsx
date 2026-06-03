@@ -1,33 +1,43 @@
 "use client";
 
 import React, { useState } from "react";
+import { createClient } from "@supabase/supabase-js";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+
+// Inicializamos el cliente de Supabase de forma segura con las variables de entorno
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || "";
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "";
+const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 export function Waitlist() {
   const [nombre, setNombre] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
   const [enviado, setEnviado] = useState<boolean>(false);
-
-  // Función preparada para conectar con Supabase, Firebase, Sheets, etc.
-  const saveToDatabase = async (userData: { nombre: string; email: string }) => {
-    return new Promise((resolve) => setTimeout(resolve, 1500));
-  };
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
 
     setLoading(true);
+    setErrorMsg(null);
 
     try {
-      await saveToDatabase({ nombre, email });
+      // Insertamos los datos directamente en la tabla 'waitlist' de tu Supabase
+      const { error } = await supabase
+        .from("waitlist")
+        .insert([{ nombre: nombre || null, email: email }]);
+
+      if (error) throw error;
+
       setEnviado(true);
-    } catch (error) {
-      console.error("Error al registrarse:", error);
+    } catch (err: any) {
+      console.error("Error al registrarse en Supabase:", err);
+      setErrorMsg("Hubo un problema al guardar tu lugar. ¡Probá de nuevo!");
     } finally {
       setLoading(false);
     }
@@ -35,11 +45,9 @@ export function Waitlist() {
 
   return (
     <section className="w-full max-w-xl mx-auto px-4 py-16 relative">
-      {/* Glow de fondo azul helado de baja opacidad */}
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.05),transparent_60%)] blur-2xl pointer-events-none" />
 
       {!enviado ? (
-        /* FORMULARIO DE REGISTRO */
         <Card className="bg-card border-border backdrop-blur-md shadow-2xl shadow-black/50 transition-all duration-300">
           <CardHeader className="text-center pb-6">
             <div className="mx-auto h-10 w-10 rounded-full bg-secondary text-blue-400 border border-border flex items-center justify-center text-lg mb-4">
@@ -54,7 +62,6 @@ export function Waitlist() {
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-5">
-              {/* Campo Nombre (Opcional) */}
               <div className="space-y-2">
                 <Label htmlFor="nombre" className="text-foreground/90 text-xs font-semibold uppercase tracking-wider">
                   Tu Nombre <span className="text-muted-foreground font-normal lowercase">(opcional)</span>
@@ -70,7 +77,6 @@ export function Waitlist() {
                 />
               </div>
 
-              {/* Campo Email (Obligatorio) */}
               <div className="space-y-2">
                 <Label htmlFor="email" className="text-foreground/90 text-xs font-semibold uppercase tracking-wider">
                   Tu Correo Electrónico
@@ -87,7 +93,12 @@ export function Waitlist() {
                 />
               </div>
 
-              {/* Botón corregido con los estilos estables de tu globals.css */}
+              {errorMsg && (
+                <p className="text-destructive text-xs font-medium text-center bg-destructive/10 py-2 rounded border border-destructive/20 animate-in fade-in">
+                  {errorMsg}
+                </p>
+              )}
+
               <Button
                 type="submit"
                 disabled={loading}
@@ -106,7 +117,6 @@ export function Waitlist() {
           </CardContent>
         </Card>
       ) : (
-        /* TARJETA DE ÉXITO */
         <Card className="bg-card border-border/80 backdrop-blur-md shadow-2xl text-center p-8 animate-in fade-in zoom-in-95 duration-500">
           <CardContent className="pt-6 space-y-4">
             <div className="mx-auto h-12 w-12 rounded-full bg-secondary border border-border text-blue-400 flex items-center justify-center text-xl shadow-lg">
@@ -120,11 +130,6 @@ export function Waitlist() {
                 Te avisaremos cuando Capify esté disponible. Vas a ser de los primeros en diseñar tu camino financiero.
               </p>
             </div>
-            {nombre && (
-              <div className="text-xs text-blue-400/80 font-mono pt-2">
-                ID de reserva generado para: {nombre}
-              </div>
-            )}
           </CardContent>
         </Card>
       )}
