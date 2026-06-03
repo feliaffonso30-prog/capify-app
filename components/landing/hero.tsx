@@ -39,7 +39,7 @@ export function Hero() {
 
           {/* CTA Buttons - Modificados para que hagan scroll local */}
           <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="#demo-section" className="w-full sm:w-auto">
+            <a href="#demo" className="w-full sm:w-auto">
               <Button 
                 size="lg" 
                 className="w-full sm:w-auto bg-gradient-to-r from-primary to-accent hover:opacity-95 text-white shadow-lg shadow-primary/25 group px-8 h-12 font-semibold tracking-wide cursor-pointer"
