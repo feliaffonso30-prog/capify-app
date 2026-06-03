@@ -69,7 +69,7 @@ export function Waitlist() {
                 <Input
                   id="nombre"
                   type="text"
-                  placeholder="Ej. Cata"
+                  placeholder="Ej. name"
                   value={nombre}
                   onChange={(e) => setNombre(e.target.value)}
                   disabled={loading}
