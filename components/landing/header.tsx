@@ -12,21 +12,23 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/40">
       <nav className="mx-auto max-w-6xl px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          {/* Logo */}
+          {/* Logo con los nuevos degradados azules de la marca */}
           <Link href="/" className="flex items-center gap-2">
             <div className="relative w-8 h-8">
               <svg viewBox="0 0 32 32" fill="none" className="w-8 h-8">
                 <defs>
                   <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="oklch(0.70 0.18 45)" />
-                    <stop offset="100%" stopColor="oklch(0.55 0.16 55)" />
+                    <stop offset="0%" stopColor="var(--primary)" />
+                    <stop offset="100%" stopColor="var(--accent)" />
                   </linearGradient>
                 </defs>
                 <rect x="2" y="2" width="28" height="28" rx="8" fill="url(#logoGradient)" />
                 <path d="M16 8C11.582 8 8 11.582 8 16c0 4.418 3.582 8 8 8 1.5 0 2.5-.5 3-1" stroke="white" strokeWidth="2.5" strokeLinecap="round" fill="none" />
               </svg>
             </div>
-            <span className="text-lg font-semibold tracking-tight">capify</span>
+            <span className="text-lg font-bold tracking-tight text-foreground">
+              capify<span className="text-cyan-400">.</span>
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -51,14 +53,21 @@ export function Header() {
             </Link>
           </div>
 
-          {/* CTA Button */}
+          {/* Desktop CTA Buttons - Rediseñados y Vinculados */}
           <div className="hidden md:flex md:items-center md:gap-3">
-            <Button variant="ghost" size="sm" className="text-sm">
-              Ingresar
-            </Button>
-            <Button size="sm" className="text-sm bg-accent hover:bg-accent/90 text-accent-foreground">
-              Comenzar
-            </Button>
+            {/* Ingresar -> Ahora baja hasta la Waitlist */}
+            <a href="#waitlist-section">
+              <Button variant="ghost" size="sm" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                Ingresar
+              </Button>
+            </a>
+            
+            {/* Comenzar -> Cambiado a "Demo" con color azul premium */}
+            <a href="#demo-section">
+              <Button size="sm" className="text-sm bg-secondary text-blue-400 border border-border hover:bg-secondary/80 font-semibold transition-all">
+                Demo
+              </Button>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -78,7 +87,7 @@ export function Header() {
 
         {/* Mobile menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden py-6 border-t border-border/40">
+          <div className="md:hidden py-6 border-t border-border/40 animate-in fade-in duration-200">
             <div className="flex flex-col gap-5">
               <Link
                 href="#beneficios"
@@ -101,13 +110,19 @@ export function Header() {
               >
                 Nosotros
               </Link>
+              
+              {/* Botones Mobile arreglados */}
               <div className="flex flex-col gap-3 pt-5 border-t border-border/40">
-                <Button variant="ghost" size="sm" className="justify-start">
-                  Ingresar
-                </Button>
-                <Button size="sm" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-                  Comenzar
-                </Button>
+                <a href="#waitlist-section" onClick={() => setMobileMenuOpen(false)}>
+                  <Button variant="ghost" size="sm" className="w-full justify-start text-muted-foreground">
+                    Ingresar
+                  </Button>
+                </a>
+                <a href="#demo-section" onClick={() => setMobileMenuOpen(false)}>
+                  <Button size="sm" className="w-full bg-secondary text-blue-400 border border-border font-semibold">
+                    Demo
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
