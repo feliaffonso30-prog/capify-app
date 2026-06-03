@@ -56,7 +56,7 @@ export function Header() {
           {/* Desktop CTA Buttons - Rediseñados y Vinculados */}
           <div className="hidden md:flex md:items-center md:gap-3">
             {/* Ingresar -> Ahora baja hasta la Waitlist */}
-            <a href="#waitlist">
+            <a href="#waitlist-section">
               <Button variant="ghost" size="sm" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Ingresar
               </Button>
@@ -113,12 +113,12 @@ export function Header() {
               
               {/* Botones Mobile arreglados */}
               <div className="flex flex-col gap-3 pt-5 border-t border-border/40">
-                <a href="#waitlist" onClick={() => setMobileMenuOpen(false)}>
+                <a href="#waitlist-section" onClick={() => setMobileMenuOpen(false)}>
                   <Button variant="ghost" size="sm" className="w-full justify-start text-muted-foreground">
                     Ingresar
                   </Button>
                 </a>
-                <a href="#demo-section" onClick={() => setMobileMenuOpen(false)}>
+                <a href="demo" onClick={() => setMobileMenuOpen(false)}>
                   <Button size="sm" className="w-full bg-secondary text-blue-400 border border-border font-semibold">
                     Demo
                   </Button>
